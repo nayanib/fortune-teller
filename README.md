@@ -1,10 +1,14 @@
 # FortuneTeller
 
-In this lab session I built my first React Native app using Expo in VS Code and ran it on an Android emulator with Expo Go.
+This is my first React Native app. I made it in VS Code using Expo during the Mobile Application Development Practical 02.
 
-The app has two screens connected with Stack Navigation (Expo Router):
+First I created an Android emulator (Pixel 4) in Android Studio. Then I created the project with `npx create-expo-app FortuneTeller`, cleaned it with `npm run reset-project` and started it with `npx expo start`. I opened the app on the emulator using the Expo Go app.
 
-- **Welcome (index.tsx)** - shows the "FORTUNE TELLER" title, an image, a short message box and a "Reveal My Coding Destiny" button.
-- **Your Fortune (reveal.tsx)** - shows a funny coding fortune with an image and a "Go Back" button to return to the first screen.
+The app is a small fun "fortune teller" for coders. It has two screens, and you can move between them using Stack Navigation (Expo Router):
 
-The header titles of both screens are set in `_layout.tsx`.
+- **Welcome screen (`index.tsx`)** - This is the first screen that opens. It shows the title "FORTUNE TELLER", a round picture of a crystal ball, and a white box with a short message about coding. At the bottom there is a green button called "Reveal My Coding Destiny". When you press it, the app goes to the second screen.
+- **Your Fortune screen (`reveal.tsx`)** - This screen shows "Here is your Fortune!", another round picture, and a box with a funny coding fortune. The "Go Back" button (or the back arrow at the top) takes you back to the first screen.
+
+The `_layout.tsx` file controls the top bar of the app. It sets the title "Welcome" for the first screen and "Your Fortune" for the second screen.
+
+In this lab I learned how to use `View`, `Text`, `Image` and `Button` to build a screen, how to style them with `StyleSheet.create`, and how to move between screens with `router.push()` and `router.back()`.
